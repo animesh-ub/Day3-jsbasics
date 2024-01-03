@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function convertArrayToObject(arr, key) {
+  return Object.assign(...arr.map(obj => ({ [obj[key]]: obj })));
+}
+
+// Example usage
+const arr = [
+  { id: 1, value: 'abc' },
+  { id: 2, value: 'xyz' }
+];
+const key = 'id';
+const obj = convertArrayToObject(arr, key);
+console.log(obj);
+
+    </script>
+</body>
+</html>
